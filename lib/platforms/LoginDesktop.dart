@@ -1,6 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/src/widgets/framework.dart';
-import 'package:flutter/src/widgets/placeholder.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:intershipwebsite/downloadFile/DownloadPage.dart';
 
@@ -15,7 +13,6 @@ class _LoginDesktopState extends State<LoginDesktop> {
   TextEditingController _email = TextEditingController();
   TextEditingController _password = TextEditingController();
 
-  bool _isChecked = false;
   @override
   Widget build(BuildContext context) {
     return SizedBox(

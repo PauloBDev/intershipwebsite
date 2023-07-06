@@ -9,7 +9,6 @@ class LoginMobile extends StatefulWidget {
 }
 
 class _LoginMobileState extends State<LoginMobile> {
-  bool _isChecked = false;
   @override
   Widget build(BuildContext context) {
     return Center(

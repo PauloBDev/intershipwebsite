@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:intershipwebsite/downloadFile/DownloadPage.dart';
 import 'package:intershipwebsite/platforms/LoginDesktop.dart';
 import 'package:intershipwebsite/platforms/LoginMobile.dart';
 import 'package:intershipwebsite/platforms/LoginTablet.dart';
@@ -19,7 +18,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: const DownloadPage(), //<--
+      home: const LoginScreen(), //<--
     );
   }
 }

@@ -1,6 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/src/widgets/framework.dart';
-import 'package:flutter/src/widgets/placeholder.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 class LoginTablet extends StatefulWidget {
@@ -11,7 +9,6 @@ class LoginTablet extends StatefulWidget {
 }
 
 class _LoginTabletState extends State<LoginTablet> {
-  bool _isChecked = false;
   @override
   Widget build(BuildContext context) {
     return Center(
