@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:intershipwebsite/downloadFile/DownloadPage.dart';
 
 class LoginTablet extends StatefulWidget {
   const LoginTablet({super.key});
@@ -9,60 +10,109 @@ class LoginTablet extends StatefulWidget {
 }
 
 class _LoginTabletState extends State<LoginTablet> {
+  TextEditingController _email = TextEditingController();
+  TextEditingController _password = TextEditingController();
   @override
   Widget build(BuildContext context) {
     return Center(
       child: SingleChildScrollView(
-        child: Padding(
-          padding: const EdgeInsets.all(30),
-          child: Center(
-            child: SizedBox(
-              width: 300,
-              child: Column(
+        child: SizedBox(
+          child: Stack(
+            children: [
+              SizedBox(
+                height: 10000,
+                width: 10000,
+                child: Image.asset(
+                  'assets/image1.png',
+                  fit: BoxFit.cover,
+                ),
+              ),
+              Column(
                 mainAxisAlignment: MainAxisAlignment.center,
-                crossAxisAlignment: CrossAxisAlignment.stretch,
                 children: [
-                  Text(
-                    'Welcome back',
-                    style: GoogleFonts.inter(
-                      fontSize: 17,
-                      color: Colors.black,
+                  Center(
+                    child: Text(
+                      'Welcome back',
+                      style: GoogleFonts.montserrat(
+                        fontSize: 17,
+                        color: Colors.white,
+                      ),
                     ),
                   ),
                   const SizedBox(height: 8),
-                  Text(
-                    'Login to your account',
-                    style: GoogleFonts.inter(
-                      fontSize: 23,
-                      color: Colors.black,
-                      fontWeight: FontWeight.w700,
+                  Center(
+                    child: Text(
+                      'Login to your account',
+                      style: GoogleFonts.montserrat(
+                        fontSize: 23,
+                        color: Colors.white,
+                        fontWeight: FontWeight.w700,
+                      ),
                     ),
                   ),
                   const SizedBox(height: 35),
-                  TextFormField(
+                  SizedBox(
+                    width: 500,
+                    child: TextFormField(
+                      controller: _email,
+                      decoration: const InputDecoration(
+                          hintText: 'Email',
+                          filled: true,
+                          fillColor: Colors.white),
                       //...
-                      ),
+                    ),
+                  ),
                   const SizedBox(height: 20),
-                  TextFormField(
+                  SizedBox(
+                    width: 500,
+                    child: TextFormField(
+                      controller: _password,
+                      obscureText: true,
+                      decoration: const InputDecoration(
+                          hintText: 'Password',
+                          filled: true,
+                          fillColor: Colors.white),
                       //...
-                      ),
-                  const SizedBox(height: 25),
-                  Row(
-                      //...
-                      ),
+                    ),
+                  ),
                   const SizedBox(height: 30),
                   TextButton(
-                    onPressed: () {}, child: Text('Login'),
+                    onPressed: () {
+                      if (_email.text == 'paulo@paulo.com' &&
+                          _password.text == 'estagio1234') {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => const DownloadPage()),
+                        );
+                      }
+                    },
+                    child: Text(
+                      'Login',
+                      style: GoogleFonts.montserrat(
+                        fontSize: 23,
+                        color: Colors.white,
+                        fontWeight: FontWeight.w700,
+                      ),
+                    ),
                     //...
                   ),
                   const SizedBox(height: 15),
                   TextButton(
-                    onPressed: () {}, child: Text('Login with Google'),
+                    onPressed: () {},
+                    child: Text(
+                      'Login with Google',
+                      style: GoogleFonts.montserrat(
+                        fontSize: 23,
+                        color: Colors.white,
+                        fontWeight: FontWeight.w700,
+                      ),
+                    ),
                     //...
                   ),
                 ],
               ),
-            ),
+            ],
           ),
         ),
       ),
