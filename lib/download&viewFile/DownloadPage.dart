@@ -23,6 +23,7 @@ class _DownloadPageState extends State<DownloadPage> {
             children: [
               SizedBox(
                 width: double.infinity,
+                height: double.infinity,
                 child: Image.asset(
                   'assets/image1.png',
                   fit: BoxFit.cover,
@@ -101,7 +102,7 @@ class _DownloadPageState extends State<DownloadPage> {
 
 downloadFile(url) {
   AnchorElement anchorElement = new AnchorElement(href: url);
-  anchorElement.download = 'EI_3807_2023';
+  anchorElement.download = 'EI_3807_2023.pdf';
   anchorElement.click();
 }
 
