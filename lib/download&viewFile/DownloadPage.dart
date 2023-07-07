@@ -45,8 +45,7 @@ class _DownloadPageState extends State<DownloadPage> {
                       ),
                       child: TextButton(
                         onPressed: () {
-                          downloadFile(
-                              'assets/Relatório_Final_de_Estágio_Paulo_Bernardino_3807.pdf');
+                          downloadFile('assets/assets/pdf.pdf');
                         },
                         child: Text(
                           ' Download Report ',
