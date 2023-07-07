@@ -10,8 +10,8 @@ class LoginDesktop extends StatefulWidget {
 }
 
 class _LoginDesktopState extends State<LoginDesktop> {
-  TextEditingController _email = TextEditingController();
-  TextEditingController _password = TextEditingController();
+  final TextEditingController _email = TextEditingController();
+  final TextEditingController _password = TextEditingController();
 
   @override
   Widget build(BuildContext context) {
@@ -19,8 +19,8 @@ class _LoginDesktopState extends State<LoginDesktop> {
       child: Stack(
         children: [
           SizedBox(
-            height: 10000,
-            width: 10000,
+            height: double.infinity,
+            width: double.infinity,
             child: Image.asset(
               'assets/image1.png',
               fit: BoxFit.cover,
@@ -32,6 +32,7 @@ class _LoginDesktopState extends State<LoginDesktop> {
               Center(
                 child: Text(
                   'Welcome back',
+                  textAlign: TextAlign.center,
                   style: GoogleFonts.montserrat(
                     fontSize: 17,
                     color: Colors.white,
@@ -42,6 +43,7 @@ class _LoginDesktopState extends State<LoginDesktop> {
               Center(
                 child: Text(
                   'Login to your account',
+                  textAlign: TextAlign.center,
                   style: GoogleFonts.montserrat(
                     fontSize: 23,
                     color: Colors.white,
@@ -75,12 +77,31 @@ class _LoginDesktopState extends State<LoginDesktop> {
               const SizedBox(height: 30),
               TextButton(
                 onPressed: () {
-                  if (_email.text == 'paulo@paulo.com' &&
-                      _password.text == 'estagio1234') {
+                  if (_email.text == 'paulo.bernardino@estagio_EI' &&
+                      _password.text == 'estagio2023') {
                     Navigator.push(
                       context,
                       MaterialPageRoute(
                           builder: (context) => const DownloadPage()),
+                    );
+                  } else {
+                    AlertDialog(
+                      title: Text(
+                        'Login failed.',
+                        style: GoogleFonts.montserrat(
+                          fontSize: 23,
+                          color: Colors.white,
+                          fontWeight: FontWeight.w700,
+                        ),
+                      ),
+                      content: Text(
+                        'Wrong credencials!',
+                        style: GoogleFonts.montserrat(
+                          fontSize: 23,
+                          color: Colors.white,
+                          fontWeight: FontWeight.w700,
+                        ),
+                      ),
                     );
                   }
                 },
@@ -92,20 +113,6 @@ class _LoginDesktopState extends State<LoginDesktop> {
                     fontWeight: FontWeight.w700,
                   ),
                 ),
-                //...
-              ),
-              const SizedBox(height: 15),
-              TextButton(
-                onPressed: () {},
-                child: Text(
-                  'Login with Google',
-                  style: GoogleFonts.montserrat(
-                    fontSize: 23,
-                    color: Colors.white,
-                    fontWeight: FontWeight.w700,
-                  ),
-                ),
-                //...
               ),
             ],
           ),

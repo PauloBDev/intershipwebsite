@@ -44,18 +44,12 @@ class _DownloadPageState extends State<DownloadPage> {
                       ),
                       child: TextButton(
                         onPressed: () {
-                          // final bytes = io.File(
-                          //         'assets/Relatório_Final_de_Estágio_Paulo_Bernardino_3807.pdf')
-                          //     .readAsBytesSync();
-                          // String file64 = base64Encode(bytes);
-                          // // debugPrint(file64);
-                          // download(file64.codeUnits, // takes bytes
-                          //     downloadName: 'EI_3807_2023_Internship.pdf');
                           downloadFile(
                               'assets/Relatório_Final_de_Estágio_Paulo_Bernardino_3807.pdf');
                         },
                         child: Text(
                           ' Download Report ',
+                          textAlign: TextAlign.center,
                           style: GoogleFonts.montserrat(
                               fontSize: 64,
                               color: Colors.white,
@@ -86,6 +80,7 @@ class _DownloadPageState extends State<DownloadPage> {
                         },
                         child: Text(
                           ' View Report ',
+                          textAlign: TextAlign.center,
                           style: GoogleFonts.montserrat(
                               fontSize: 64,
                               color: Colors.white,
