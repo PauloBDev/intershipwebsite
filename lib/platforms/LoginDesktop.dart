@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:intershipwebsite/downloadFile/DownloadPage.dart';
+import 'package:intershipwebsite/download&viewFile/DownloadPage.dart';
 
 class LoginDesktop extends StatefulWidget {
   const LoginDesktop({super.key});

@@ -30,8 +30,8 @@ class _PDFPageState extends State<PDFPage> {
             width: MediaQuery.of(context).size.width / 2,
             child: Center(
               child: SfPdfViewer.asset(
-                'assets/Relatório Final de Estágio Paulo Bernardino 3807.pdf',
-                initialZoomLevel: 0.1,
+                'assets/Relatório_Final_de_Estágio_Paulo_Bernardino_3807.pdf',
+                initialZoomLevel: 1,
               ),
             ),
           ),
